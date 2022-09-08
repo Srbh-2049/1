@@ -2,9 +2,9 @@ body {
     color: #333333;
     font-family: arial;
     max-width: 650px;
-    margin: 0 auto;
+    margin:auto;
     padding: 0 16px;
-
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh
@@ -12,6 +12,7 @@ body {
 
 .main-content {
     flex-grow: 1;
+   align-items: center;
 }
 
 footer {
@@ -52,4 +53,10 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+ p #message-1 {
+  border: 2px solid #888888;
+  border-radius:10px;
+  box-sizing: border-box;
 }

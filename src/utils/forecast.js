@@ -9,7 +9,9 @@ const forecast = (latitude, longitude, callback) => {
         } else if (response.body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined,'It`s currently '+response.body.current.weather_descriptions[0]+' out there.'+'It is currently ' + response.body.current.temperature + ' degress out. There is  ' + response.body.current.wind_speed + ' of wind speed.'+'There is  '+ response.body.current.cloudcover +'% of cloud cover.')
+            
+            const str="Latitude and Longitude of our concerned place is "+ latitude +' , '+longitude+" respectively."+'It`s currently '+response.body.current.weather_descriptions[0]+' out there.'+'Current temperature of that place is ' + response.body.current.temperature + ' degree celcius . Wind speed is ' + response.body.current.wind_speed + 'knots flowing in '+response.body.current.wind_dir+ " direction. "+'There is  '+ response.body.current.cloudcover +'% of cloud cover.'+"Humidity of your concerned place is "+response.body.current.humidity +"."
+            callback(undefined,str)
         }
     })
 }
